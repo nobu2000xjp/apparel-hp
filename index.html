@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BRAND NAME | Apparel Store</title>
+  <meta name="description" content="日常に寄り添う、長く着られる服。BRAND NAME の公式サイト。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="#" class="logo">BRAND NAME</a>
+    <button class="menu-toggle" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav">
+      <a href="#concept">Concept</a>
+      <a href="#collection">Collection</a>
+      <a href="#news">News</a>
+      <a href="#shop">Shop</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-visual" aria-hidden="true"></div>
+      <div class="hero-text">
+        <p class="eyebrow">2026 Autumn / Winter</p>
+        <h1>まいにちを、<br>すこし上質に。</h1>
+        <a href="#collection" class="btn">Collection を見る</a>
+      </div>
+    </section>
+
+    <section id="concept" class="section concept">
+      <h2 class="section-title"><span>Concept</span>私たちについて</h2>
+      <div class="concept-body">
+        <p>素材選びから縫製まで、ひとつひとつ丁寧に。<br>流行に左右されず、何年も袖を通したくなる服をつくっています。</p>
+        <p>ここにブランドのストーリーや想いを書いてください。創業のきっかけ、大切にしていること、こだわりの素材など。</p>
+      </div>
+    </section>
+
+    <section id="collection" class="section collection">
+      <h2 class="section-title"><span>Collection</span>アイテム</h2>
+      <ul class="items">
+        <li class="item">
+          <div class="item-img c1"></div>
+          <p class="item-name">Wool Over Coat</p>
+          <p class="item-price">¥48,400</p>
+        </li>
+        <li class="item">
+          <div class="item-img c2"></div>
+          <p class="item-name">Cotton Knit Cardigan</p>
+          <p class="item-price">¥19,800</p>
+        </li>
+        <li class="item">
+          <div class="item-img c3"></div>
+          <p class="item-name">Wide Tuck Trousers</p>
+          <p class="item-price">¥16,500</p>
+        </li>
+        <li class="item">
+          <div class="item-img c4"></div>
+          <p class="item-name">Linen Band Collar Shirt</p>
+          <p class="item-price">¥13,200</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="news" class="section news">
+      <h2 class="section-title"><span>News</span>お知らせ</h2>
+      <ul class="news-list">
+        <li><time datetime="2026-10-01">2026.10.01</time><p>Autumn / Winter コレクションを発売しました。</p></li>
+        <li><time datetime="2026-09-15">2026.09.15</time><p>公式サイトをオープンしました。</p></li>
+        <li><time datetime="2026-09-01">2026.09.01</time><p>9月の定休日のお知らせ。</p></li>
+      </ul>
+    </section>
+
+    <section id="shop" class="section shop">
+      <h2 class="section-title"><span>Shop</span>店舗情報</h2>
+      <dl class="shop-info">
+        <dt>住所</dt><dd>〒000-0000 東京都○○区○○ 0-0-0</dd>
+        <dt>営業時間</dt><dd>11:00 – 20:00</dd>
+        <dt>定休日</dt><dd>水曜日</dd>
+        <dt>電話</dt><dd>00-0000-0000</dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/" target="_blank" rel="noopener">@brandname</a></dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="logo">BRAND NAME</p>
+    <p class="copy">&copy; 2026 BRAND NAME</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const header = document.querySelector('.site-header');
+    toggle.addEventListener('click', () => {
+      const open = header.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.nav a').forEach(a =>
+      a.addEventListener('click', () => {
+        header.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      })
+    );
+  </script>
+</body>
+</html>
